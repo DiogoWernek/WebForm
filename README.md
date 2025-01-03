@@ -1,4 +1,2 @@
-<h1>
-  Web Form, a RocketSeat's Pratical Exercise
-</h1>
+<h1>Web Form</h1>
 
