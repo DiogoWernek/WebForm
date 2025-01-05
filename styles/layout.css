@@ -2,7 +2,11 @@
   display: grid;
   grid-template-columns: 51.25% 48.75%;
   height: 100vh;
-  overflow: hidden;
+
+  @media (max-width: 992px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 main {
@@ -12,6 +16,10 @@ main {
   & .main-container {
     max-width: 33rem;
     margin-left: auto;
+    
+    @media (max-width: 992px) {
+      margin-left: 0;
+    }
   }
 
   & .back {
@@ -25,6 +33,10 @@ main {
     margin-bottom: .5rem;
     font: 600 1.5rem/1.25 var(--font-family);
   }
+
+  @media (max-width: 488px) {
+    padding: 1rem;
+  }
 }
 
 aside {
@@ -37,6 +49,12 @@ aside {
     & > img {
       margin-top: 2rem;
     }
+    
+    @media (max-width: 992px) {
+      & > img {
+        display: none;
+      }
+    }
   }
 
   & h2 {
@@ -46,5 +64,19 @@ aside {
 
   & span {
     color: var(--text-highlight);
+  }
+ 
+  @media (max-width: 992px) {
+    padding: 1rem;
+
+    & h2 {
+      margin-bottom: 0;
+      font: 600 1rem/1.25 var(--font-family);
+    }
+
+    p {
+      margin-top: 0.2rem;
+      font: 400 0.8rem/1.25 var(--font-family);
+    }
   }
 }
