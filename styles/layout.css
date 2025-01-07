@@ -6,6 +6,7 @@
   @media (max-width: 992px) {
     display: flex;
     flex-direction: column-reverse;
+    height: auto;
   }
 }
 
@@ -51,8 +52,13 @@ aside {
     }
     
     @media (max-width: 992px) {
-      & > img {
+      .subtitle {
         display: none;
+      }
+      
+      > img {
+        width: 19.5rem;
+        margin-top: 0.75rem;
       }
     }
   }
@@ -67,7 +73,15 @@ aside {
   }
  
   @media (max-width: 992px) {
+    display: flex;
     padding: 1rem;
+    justify-content: center;
+
+    .aside-container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
 
     & h2 {
       margin-bottom: 0;
